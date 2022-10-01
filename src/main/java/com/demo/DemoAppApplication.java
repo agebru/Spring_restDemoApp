@@ -23,7 +23,7 @@ import com.demo.model.Project;
 public class DemoAppApplication {
      
 	//GHToken
-	//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
+	//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
 	public static void main(String[] args) {
 		SpringApplication.run(DemoAppApplication.class, args);
 
