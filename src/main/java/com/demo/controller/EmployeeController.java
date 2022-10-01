@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.dao.EmployeeRepository;
+import com.demo.dto.EmployeeDTO;
 import com.demo.model.Employee;
 
 @RestController
@@ -39,6 +40,12 @@ public class EmployeeController {
 	@GetMapping("/findAll2")
 	public List<Employee> findAllJoinFetch() {
 		return employeeRepo.findAllJoinFetch();
+
+	}
+	
+	@GetMapping("/emp-project")
+	public List<EmployeeDTO> getEmployeesProjection() {
+		return employeeRepo.findBy();
 
 	}
 

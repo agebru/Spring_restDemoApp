@@ -1,5 +1,6 @@
 package com.demo.model;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
@@ -23,6 +26,25 @@ public class Employee {
 
 	@OneToMany(mappedBy = "employee", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
 	private Set<Project> projects = new HashSet<>();
+	
+	
+	LocalDateTime creationTime;
+	
+	LocalDateTime updatedOn;
+	
+	
+	@PrePersist
+	public void EmployeeCreation() {
+		this.creationTime=LocalDateTime.now();
+		this.updatedOn=LocalDateTime.now();
+		
+	}
+	
+	@PreUpdate
+	public void EmployeeUpdation() {		
+		this.updatedOn=LocalDateTime.now();
+		
+	}
 
 	public Employee(String firstName, String lastName, double salary) {
 		this.firstName = firstName;
