@@ -26,7 +26,7 @@ import com.demo.model.Project;
 public class DemoAppApplication {
 
 	// GHToken
-	// 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
+	// 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
 	public static void main(String[] args) {
 		SpringApplication.run(DemoAppApplication.class, args);
 
