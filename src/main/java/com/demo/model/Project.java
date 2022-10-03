@@ -3,6 +3,7 @@ package com.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -19,7 +20,7 @@ public class Project {
 
 	@ManyToOne
 	@JsonIgnore
-	// @JoinColumn(name = "Employee_ID")
+	@JoinColumn(name = "Employee_ID")
 	private Employee employee;
 
 	public Project() {

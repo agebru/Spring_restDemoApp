@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.dao.EmployeeRepository;
+import com.demo.model.Address;
+import com.demo.model.Course;
+import com.demo.model.Department;
 import com.demo.model.Employee;
 import com.demo.model.Project;
 
@@ -41,11 +44,22 @@ public class DemoAppApplication {
 			employeeRepository.save(new Employee("John","Doe",25000.0));
 			employeeRepository.save(new Employee("Steven","Khan",20000.0));
 			
-			Employee empJoss = new Employee("Jossy","Ben",30000.0);
-			empJoss.addProject(new Project("Accounting"));
 			
-			employeeRepository.save(empJoss);
+			//Adding Employee Jossy
+				Employee empJoss = new Employee("Jossy","Ben",30000.0);
+				empJoss.addProject(new Project("Accounting"));					
+				 Department deptJoss=new Department(1001,"Computer Science",new Address(5331,"Dallas","dallas st"));
+				  deptJoss.addCourse(new Course("Data Structure",4));
+						
+				empJoss.addDepartment(deptJoss);
+				//empJoss.setDepartments(new ArrayList<>(Arrays.asList(JossyDept)));			
+				employeeRepository.save(empJoss);
+			// End of Employee Jossy
 			
+			
+			
+			
+				//Adding Employee Hagos
 			
 			Employee empHagos = new Employee("Hagos","Belay",45000.0);
 			empHagos.addProject(new Project("HR"));
