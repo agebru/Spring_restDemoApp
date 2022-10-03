@@ -46,6 +46,17 @@ public class Department {
 		this.deptName = deptName;
 		this.address = address;
 	}
+	
+	public Department(Integer id, String deptName, Address address, List<Course> courses) {
+		this.deptId = id;
+		this.deptName = deptName;
+		this.address = address;
+		this.courses=courses;
+		
+		for (Course crs : courses) {
+			crs.setDepartment(this);
+		}
+	}
 
 	public Integer getDeptId() {
 		return deptId;
