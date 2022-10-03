@@ -91,6 +91,7 @@ public class DemoAppApplication {
 			
 			// Adding John Employee
 				Employee empJohn = new Employee("John", "Doe", 25000.0);
+				empJohn.setProjects(new HashSet<>(Arrays.asList(new Project("Educational Project"),new Project("Professional Project"))));
 			    Employee populatedEmployee=createDepartment(empJohn);
 				employeeRepository.save(empJohn);
 				employeeRepository.save(populatedEmployee);

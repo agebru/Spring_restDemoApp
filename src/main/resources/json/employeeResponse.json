@@ -1,0 +1,142 @@
+{
+	"httpMethod": "GET",
+	"URLs": [
+		"http://localhost:8081/all",
+		"http://localhost:8081/findAll2"
+	]
+}
+
+[
+    {
+        "firstName": "Steven",
+        "lastName": "Khan",
+        "salary": 20000.0
+    },
+    {
+        "firstName": "Jossy",
+        "lastName": "Ben",
+        "salary": 30000.0,
+        "projects": [
+            {
+                "name": "Accounting"
+            }
+        ],
+        "departments": [
+            {
+                "deptId": 1001,
+                "deptName": "Computer Science",
+                "courses": [
+                    {
+                        "id": 1,
+                        "courseName": "Data Structure",
+                        "crtHr": 4
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "firstName": "Hagos",
+        "lastName": "Belay",
+        "salary": 45000.0,
+        "projects": [
+            {
+                "name": "Field work Project"
+            },
+            {
+                "name": "Development project"
+            },
+            {
+                "name": "HR Project"
+            }
+        ],
+        "departments": [
+            {
+                "deptId": 1002,
+                "deptName": "HR Dept",
+                "courses": [
+                    {
+                        "id": 2,
+                        "courseName": "Intruduction to Human Resources",
+                        "crtHr": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "firstName": "Filly",
+        "lastName": "George",
+        "salary": 35000.0,
+        "projects": [
+            {
+                "name": "Water Consruction Project"
+            }
+        ],
+        "departments": [
+            {
+                "deptId": 3002,
+                "deptName": "Construction Dept",
+                "courses": [
+                    {
+                        "id": 3,
+                        "courseName": "Water Technlogy",
+                        "crtHr": 4
+                    },
+                    {
+                        "id": 4,
+                        "courseName": "Hydrolics Technlogy",
+                        "crtHr": 3
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "salary": 25000.0,
+        "projects": [
+            {
+                "name": "Educational Project"
+            },
+            {
+                "name": "Professional Project"
+            }
+        ],
+        "departments": [
+            {
+                "deptId": 3007,
+                "deptName": "IT Dept",
+                "courses": [
+                    {
+                        "id": 5,
+                        "courseName": "Database programming",
+                        "crtHr": 3
+                    },
+                    {
+                        "id": 6,
+                        "courseName": "Java Basics",
+                        "crtHr": 4
+                    }
+                ]
+            },
+            {
+                "deptId": 3008,
+                "deptName": "CSE Dept",
+                "courses": [
+                    {
+                        "id": 7,
+                        "courseName": "C# programming",
+                        "crtHr": 3
+                    },
+                    {
+                        "id": 8,
+                        "courseName": "MongoDB",
+                        "crtHr": 4
+                    }
+                ]
+            }
+        ]
+    }
+]
